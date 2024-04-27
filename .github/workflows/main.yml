@@ -43,6 +43,9 @@ jobs:
                   npm run clean
                   npm run build
 
+            - name: List contents of build directory
+              run: ls -R ./public
+
             - name: Upload artifact
               uses: actions/upload-artifact@v2
               with:
