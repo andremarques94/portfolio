@@ -27,6 +27,7 @@ jobs:
               run: |
                   npm run clean
                   npm run build
+
             - name: Deploy to GH Pages 🚀
               uses: peaceiris/actions-gh-pages@v3
               with:
