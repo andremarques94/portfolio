@@ -1,15 +1,34 @@
 function render(elem) {
-    elem.style = 'width:100%; height:100%;display:flex;justify-content:center;align-items:center;';
-    elem.innerHTML = `<div style="text-align: center;">
-      <img src="./assets/shameless.png" style="width: 300px; height: 300px; margin-bottom: 20px;">
-      <h1>BOILERPLATE FOR VANILLA-JS APPS</h1>
-      <h2>USING ESBUILD</h2>
-      <br>
-      <br>
-      <h2>TEST ACTION</h2>
-      <h2>To get started, add a new file to <code>js/pages</code> and save to reload.</h2>
-      <br>
-      <h2>Happy coding!</h2>
+    elem.style = 'width:100%; height:100%;';
+    elem.innerHTML = `
+      <nav class="navbar">
+              <div class="nav-container">
+                  <ul class="nav-links">
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#portfolio">Portfolio</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                  </ul>
+                   <img class="nav-logo" src="./assets/me.jpg" alt="André Marques">
+              </div>
+      </nav>
+    <div style="width:100%; height:100%; display:flex;align-items:center;justify-content:center;">
+      <div style="text-align: justify;">
+        <h4>Hi, my name is</h4>
+        <br>
+        <h1>André Marques.</h1>
+        <br>
+        <h2>I'm a software developer.</h2>
+        <h3>And this is my personal website.</h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Currently based in Lisbon, Portugal</p>
+        <p>At the moment I work at <a href="https://codeforall.com/" target="_blank">Code For All</a> as one of
+        their lead programming teachers</p>
+        <p>There I teach programming to people that want to change their careers and become software developers</p>
+      </div>
     </div>`;
 }
 

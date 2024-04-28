@@ -16,3 +16,52 @@ body {
     background-color: black;
     color: white;
 }
+
+a {
+    color: red; /* Set the text color to red */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333; /* Navbar background color */
+    padding: 15px 0; /* Vertical and horizontal padding */
+}
+
+.nav-logo {
+    margin: 0;
+    padding: 0;
+    border-radius: 100%;
+    width: 60px;
+    height: auto;
+}
+
+.nav-container {
+    max-width: 1200px; /* Maximum width of the navbar */
+    margin: 0 auto; /* Center align the navbar */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Align items vertically */
+}
+
+.nav-links {
+    list-style: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block; /* Display list items horizontally */
+    margin-left: 20px; /* Add space between list items */
+}
+
+.nav-links li a {
+    color: #fff; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Link font size */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.nav-links li a:hover {
+    color: red; /* Change text color on hover */
+}
