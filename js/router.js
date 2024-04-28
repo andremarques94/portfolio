@@ -6,7 +6,8 @@ let routes;
  * imports and init a controller
  */
 async function launchPage(domElement, pageName) {
-    const page = await import(`./js/pages/${pageName}.js`);
+    console.log(document.location);
+    const page = await import(`/js/pages/${pageName}.js`);
     page.render(domElement);
 }
 
