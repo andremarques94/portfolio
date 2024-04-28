@@ -7,7 +7,7 @@ let routes;
  */
 async function launchPage(domElement, pageName) {
     console.log(document.location);
-    const page = await import(`/vanilla-js-boilerplate/js/pages/${pageName}.js`);
+    const page = await import(`/js/pages/${pageName}.js`);
     page.render(domElement);
 }
 
