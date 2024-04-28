@@ -6,7 +6,8 @@ let routes;
  * imports and init a controller
  */
 async function launchPage(domElement, pageName) {
-    const page = await import(`/js/pages/${pageName}.js`);
+    const baseURL = new URL('.', import.meta.url).href;
+    const page = await import(`${baseURL}/pages/${pageName}.js`);
     page.render(domElement);
 }
 
@@ -42,12 +43,9 @@ export function navigate(path) {
     if (path === routes.currentPath.path) {
         return;
     }
-    console.log('this is path', path);
     const routeKey = Object.keys(routes).find(key => routes[key].path === path);
-    console.log(routeKey);
     const route = routes[routeKey] || routes.home;
 
-    console.log('this is route', route);
     setCurrentRoute(route);
     render(route);
 }
