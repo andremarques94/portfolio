@@ -6,7 +6,6 @@ let routes;
  * imports and init a controller
  */
 async function launchPage(domElement, pageName) {
-    console.log(document.location);
     const page = await import(`/js/pages/${pageName}.js`);
     page.render(domElement);
 }
@@ -19,17 +18,6 @@ async function launchPage(domElement, pageName) {
 function setCurrentRoute({ path, page }) {
     routes.currentPath.path = path;
     routes.currentPath.page = page;
-}
-
-/**
- *
- * @param {string} path the path to search for
- * @returns the route that matches the URL path or the home route
- */
-function getRoute(path) {
-    const routeKey = Object.keys(routes).find(key => routes[key].path === path);
-    const route = routes[routeKey] || routes.home;
-    return route;
 }
 
 //Render function
@@ -50,14 +38,29 @@ function render({ page }) {
  * @param {object} state state obj
  * @returns
  */
-export function navigate(path, initialFullPageLoad = false) {
-    const route = getRoute(path);
+export function navigate(path) {
+    if (path === routes.currentPath.path) {
+        return;
+    }
+    console.log('this is path', path);
+    const routeKey = Object.keys(routes).find(key => routes[key].path === path);
+    console.log(routeKey);
+    const route = routes[routeKey] || routes.home;
 
+    console.log('this is route', route);
     setCurrentRoute(route);
-    initialFullPageLoad
-        ? history.replaceState(route, '', route.path)
-        : history.pushState(route, '', route.path);
     render(route);
+}
+
+function getPath(urlStr) {
+    return new URL(urlStr).hash.slice(1);
+}
+
+function navigateOnHashChange() {
+    addEventListener('hashchange', function (e) {
+        const path = getPath(e.newURL);
+        navigate(path);
+    });
 }
 
 /**
@@ -65,10 +68,10 @@ export function navigate(path, initialFullPageLoad = false) {
  */
 function init(routesObject) {
     routes = routesObject;
-    const path = document.location.pathname;
+    window.location.hash = window.location.hash || routes.home.path;
 
-    navigate(path, true);
-    window.onpopstate = ({ state }) => navigate(state.path, true);
+    navigate(getPath(window.location.href));
+    navigateOnHashChange();
 }
 
 export default { init };
