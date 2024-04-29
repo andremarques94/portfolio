@@ -1,8 +1,5 @@
-import { navbar } from '../components/header-navbar.js';
-
 function render(elem) {
     elem.style = 'width:100%; height:100%; display:flex;flex-direction:column;';
-    elem.appendChild(navbar());
 
     const content = document.createElement('div');
 

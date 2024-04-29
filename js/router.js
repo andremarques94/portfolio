@@ -1,3 +1,5 @@
+import { navbar } from './components/header-navbar.js';
+
 let routes;
 
 /**
@@ -27,6 +29,9 @@ function setCurrentRoute({ path, page }) {
 function render({ page }) {
     const root = document.querySelector('#app');
     const domElement = document.createElement('div');
+
+    domElement.appendChild(navbar()); // Add navbar to all pages
+
     root.innerHTML = '';
     root.appendChild(domElement);
 
@@ -44,6 +49,7 @@ export function navigate(path) {
     if (path === routes.currentPath.path) {
         return;
     }
+
     const routeKey = Object.keys(routes).find(key => routes[key].path === path);
     const route = routes[routeKey] || routes.home;
 
