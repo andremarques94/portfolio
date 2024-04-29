@@ -36,10 +36,9 @@ await build({
     format: 'esm',
     bundle: true,
     minify: true,
-    splitting: true,
     treeShaking: true,
     loader: { '.html': 'text' },
-    drop: ['debugger'],
+    drop: ['debugger', 'console'],
     dropLabels: ['DEV'],
     logLevel: 'info',
     plugins: [

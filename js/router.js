@@ -7,7 +7,8 @@ let routes;
  */
 async function launchPage(domElement, pageName) {
     const baseURL = new URL('.', import.meta.url).href;
-    const page = await import(`${baseURL}/pages/${pageName}.js`);
+
+    const page = await import(`${baseURL}pages/${pageName}.js`);
     page.render(domElement);
 }
 
