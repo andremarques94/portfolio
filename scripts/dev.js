@@ -20,7 +20,7 @@ const buildCss = await context({
 });
 
 const buildJs = await context({
-    entryPoints: ['js/app.js', 'js/pages/**/*.js'],
+    entryPoints: ['js/**'],
     format: 'esm',
     bundle: true,
     logLevel: 'info',
