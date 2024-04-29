@@ -1,46 +1,13 @@
-# BOILERPLATE FOR JAVASCRIPT VANILLA PROJECTS
+# Personal Website hosted on Github Pages
 
-## NODE >=20.11.1 is required
+## Check it [HERE](https://andremarques94.github.io/portfolio-ghpages/)
 
-## Installation
+## What it uses
 
-```bash
-npm install
-```
-
-
-## Available scripts
-
--   `npm run dev` - runs development server
--   `npm run build` - builds the project
-
-## What it has
-
--   ESBUILD
--   ESLINT && PRETTIER
--   ROUTING
+-   HASH ROUTING (gh-pages supports it)
+-   Calculates routes based on the filesystem
 -   DEV SERVER
 -   BUILD SCRIPT
-
-## Routing your app
-
-This template uses a file-system based router
-
--   Add your page in `/js/pages` folder
--   Routes are created on build time and will have the same name as the file
-
-e.g.
-
-```bash
-
-├── pages
-    ├── home.js
-    └── test
-        └── other.js
-
-```
-
-Will create the following routes:
-
--   `/home`
--   `/test/other`
+-   github Actions
+-   ESBUILD
+-   ESLINT && PRETTIER
