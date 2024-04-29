@@ -1,1 +1,10 @@
-var n;async function s(e,t){(await import(`${new URL(".",import.meta.url).href}pages/${t}.js`)).render(e)}function u({path:e,page:t}){n.currentPath.path=e,n.currentPath.page=t}function h({page:e}){let t=document.querySelector("#app"),o=document.createElement("div");t.innerHTML="",t.appendChild(o),s(o,e)}function r(e){if(e===n.currentPath.path)return;let t=Object.keys(n).find(a=>n[a].path===e),o=n[t]||n.home;u(o),h(o)}function i(e){return new URL(e).hash.slice(1)}function d(){addEventListener("hashchange",function(e){let t=i(e.newURL);r(t)})}function p(e){n=e,window.location.hash=window.location.hash||n.home.path,r(i(window.location.href)),d()}var c={init:p};window.addEventListener("DOMContentLoaded",async()=>{let t=await(await fetch("./js/routes.json")).json();c.init(t)});
+function r(){let e=document.createElement("nav");return e.className="navbar",e.innerHTML=`
+          <div class="nav-container">
+            <ul class="nav-links">
+              <li><a href="#/home">Home</a></li>
+              <li><a href="#/about">About</a></li>
+              <li><a href="#/portfolio">Portfolio</a></li>
+              <li><a href="#/contact">Contact</a></li>
+            </ul>
+            <img class="nav-logo" src="./assets/me.jpg" alt="Andr\xE9 Marques">
+          </div>`,e}var t;async function u(e,n){(await import(`${new URL(".",import.meta.url).href}pages/${n}.js`)).render(e)}function l({path:e,page:n}){t.currentPath.path=e,t.currentPath.page=n}function h({page:e}){let n=document.querySelector("#app"),a=document.createElement("div");a.appendChild(r()),n.innerHTML="",n.appendChild(a),u(a,e)}function i(e){if(e===t.currentPath.path)return;let n=Object.keys(t).find(o=>t[o].path===e),a=t[n]||t.home;l(a),h(a)}function c(e){return new URL(e).hash.slice(1)}function d(){addEventListener("hashchange",function(e){let n=c(e.newURL);i(n)})}function p(e){t=e,window.location.hash=window.location.hash||t.home.path,i(c(window.location.href)),d()}var s={init:p};window.addEventListener("DOMContentLoaded",async()=>{let n=await(await fetch("./js/routes.json")).json();s.init(n)});
