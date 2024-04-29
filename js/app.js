@@ -1,1 +1,1 @@
-import"./chunk-753T5CBI.js";import"./chunk-AXWD2RMA.js";
+import{b as e}from"./chunk-AXWD2RMA.js";window.addEventListener("DOMContentLoaded",async()=>{let n=await(await fetch("./js/routes.json")).json();e.init(n)});
