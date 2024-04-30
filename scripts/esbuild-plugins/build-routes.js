@@ -11,7 +11,7 @@ const getDirectories = async source => {
         .reduce(
             (acc, path) => {
                 const route = {
-                    path,
+                    path: path === '/home' ? '/' : path,
                     page: path
                 };
 
