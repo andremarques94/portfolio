@@ -16,7 +16,7 @@ function s(e){let t=document.createElement("div");t.innerHTML=`
             <div class="relative h-64 sm:h-72 lg:h-full">
               <img
                 src="./assets/final-class.jpg"
-                alt="NOZK class photo"
+                alt="Andr\xE9 Marques teaching a class at Code For All_"
                 class="absolute inset-0 h-full w-full object-contain"
                 width="1200"
                 height="900"
