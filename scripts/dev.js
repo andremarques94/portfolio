@@ -10,7 +10,6 @@ const publicDir = path.join(DEV_DIR, BUILD_DIR);
 const buildCss = await context({
     entryPoints: ['css/*.css'],
     bundle: true,
-    external: ['/*'],
     loader: {
         '.png': 'copy',
         '.jpg': 'copy',

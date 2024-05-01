@@ -10,4 +10,5 @@
 -   BUILD SCRIPT
 -   github Actions
 -   ESBUILD
+-   TAILWIND CSS
 -   ESLINT && PRETTIER

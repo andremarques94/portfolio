@@ -1,4 +1,5 @@
 import { navbar } from './components/header-navbar.js';
+import { footer } from './components/footer.js';
 
 let routes;
 
@@ -30,10 +31,10 @@ function render({ page }) {
     const root = document.querySelector('#app');
     const domElement = document.createElement('div');
 
-    domElement.appendChild(navbar()); // Add navbar to all pages
-
     root.innerHTML = '';
+    root.appendChild(navbar());
     root.appendChild(domElement);
+    root.appendChild(footer());
 
     launchPage(domElement, page);
 }
