@@ -1,10 +1,67 @@
-function r(){let n=document.createElement("nav");return n.className="navbar",n.innerHTML=`
-          <div class="nav-container">
-            <ul class="nav-links">
-              <li><a href="#/">Home</a></li>
-              <li><a href="#/about">About</a></li>
-              <li><a href="#/portfolio">Portfolio</a></li>
-              <li><a href="#/contact">Contact</a></li>
-            </ul>
-            <a href="https://www.linkedin.com/in/andrelourencomarques" target="_blank"><img class="nav-logo" src="./assets/me.jpg" alt="Andr\xE9 Marques"></a>
-          </div>`,n}var t;async function l(n,e){(await import(`${new URL(".",import.meta.url).href}pages/${e}.js`)).render(n)}function u({path:n,page:e}){t.currentPath.path=n,t.currentPath.page=e}function h({page:n}){let e=document.querySelector("#app"),a=document.createElement("div");a.appendChild(r()),e.innerHTML="",e.appendChild(a),l(a,n)}function i(n){if(n===t.currentPath.path)return;let e=Object.keys(t).find(o=>t[o].path===n),a=t[e]||t.home;u(a),h(a)}function c(n){return new URL(n).hash.slice(1)}function d(){addEventListener("hashchange",function(n){let e=c(n.newURL);i(e)})}function p(n){t=n,window.location.hash=window.location.hash||t.home.path,i(c(window.location.href)),d()}var s={init:p};window.addEventListener("DOMContentLoaded",async()=>{let e=await(await fetch("./js/routes.json")).json();s.init(e)});
+function a(){let e=document.createElement("header");return e.className="flex sticky top-0 items-center justify-between px-4 py-3 bg-gray-900 text-white",e.appendChild(d()),e.appendChild(h()),e.appendChild(u()),e}function d(){let e=document.createElement("a");e.href="https://www.linkedin.com/in/andrelourencomarques",e.target="_blank";let t=document.createElement("img");return t.className="invisible md:visible h-12 w-12 rounded-full transition-transform duration-500 ease-in-out transform hover:scale-110",t.src="./assets/me.jpg",t.alt="Andr\xE9 Marques",e.appendChild(t),e}function h(){let e=document.createElement("nav");return e.className="flex items-center gap-6",e.innerHTML=`
+      <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/">Home</a>
+      <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/about">About</a>
+      <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/portfolio">Portfolio</a>
+      <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/contact">Contact</a>`,e}function u(){let e=document.createElement("a");return e.className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-md bg-slate-950 text-sm font-medium hover:bg-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 transition-colors duration-500 ease-in-out text-white",e.innerHTML=`
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-5 w-5"
+      >
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" x2="12" y1="15" y2="3"></line>
+      </svg>
+      <span class="transition-colors duration-500 ease-in-out text-white">Download CV</span>`,e}function i(){let e=document.createElement("footer");return e.className="sticky bottom-0 bg-gray-900 px-4 py-3 sm:px-6 lg:px-8",e.innerHTML=`
+      <div class="flex items-center justify-between">
+        <p class="text-sm text-gray-400">\xA9 2024 Andr\xE9 Marques. All rights reserved.</p>
+        <div class="flex space-x-4">
+        <a class="text-white hover:text-gray-400 transition-colors" href="https://www.linkedin.com/in/andrelourencomarques" target="_blank">
+                  <div class="rounded-full bg-white p-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-5 w-5 text-black"
+                    >
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect width="4" height="12" x="2" y="9"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                  </div>
+                </a>
+          <a class="text-white hover:text-gray-400 transition-colors" href="https://github.com/andremarques94" target="_blank">
+                    <div class="rounded-full bg-white p-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="h-5 w-5 text-black"
+                      >
+                        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                        <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                      </svg>
+                    </div>
+                  </a>
+
+        </div>
+      </div>`,e}var n;async function p(e,t){(await import(`${new URL(".",import.meta.url).href}pages/${t}.js`)).render(e)}function m({path:e,page:t}){n.currentPath.path=e,n.currentPath.page=t}function w({page:e}){let t=document.querySelector("#app"),o=document.createElement("div");t.innerHTML="",t.appendChild(a()),t.appendChild(o),t.appendChild(i()),p(o,e)}function s(e){if(e===n.currentPath.path)return;let t=Object.keys(n).find(r=>n[r].path===e),o=n[t]||n.home;m(o),w(o)}function c(e){return new URL(e).hash.slice(1)}function f(){addEventListener("hashchange",function(e){let t=c(e.newURL);s(t)})}function v(e){n=e,window.location.hash=window.location.hash||n.home.path,s(c(window.location.href)),f()}var l={init:v};window.addEventListener("DOMContentLoaded",async()=>{let t=await(await fetch("./js/routes.json")).json();l.init(t)});
