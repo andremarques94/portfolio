@@ -18,8 +18,8 @@ function render(elem) {
             </div>
             <div class="relative h-64 sm:h-72 lg:h-full">
               <img
-                src="/assets/final-class.jpg"
-                alt="Hero image"
+                src="./assets/final-class.jpg"
+                alt="NOZK IMAGE!"
                 class="absolute inset-0 h-full w-full object-contain"
                 width="1200"
                 height="900"
