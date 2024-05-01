@@ -8,7 +8,7 @@ import buildRoutesPlugin from './esbuild-plugins/build-routes.js';
 const publicDir = path.join(DEV_DIR, BUILD_DIR);
 
 const buildCss = await context({
-    entryPoints: ['css/*.css'],
+    entryPoints: ['css/stylesheet.css'],
     bundle: true,
     loader: {
         '.png': 'copy',

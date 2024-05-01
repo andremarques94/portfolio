@@ -4,7 +4,7 @@ import buildRoutesPlugin from './esbuild-plugins/build-routes.js';
 import { BUILD_DIR } from './commons/commons.js';
 
 await build({
-    entryPoints: ['css/*.css'],
+    entryPoints: ['css/stylesheet.css'],
     bundle: true,
     minify: true,
     external: ['/*'],

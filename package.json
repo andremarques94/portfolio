@@ -12,7 +12,7 @@
         "dev": "npm run build:css && node scripts/dev.js",
         "build": "npm run build:css && node scripts/build.js",
         "build:css": "npx tailwindcss -i ./css/input.css -o ./css/stylesheet.css",
-        "clean": "rm -rf public out",
+        "clean": "rm -rf public out css/stylesheet.css",
         "lint": "eslint . --ext .js",
         "lint:fix": "eslint --fix ."
     },

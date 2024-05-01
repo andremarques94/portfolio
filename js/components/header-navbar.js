@@ -39,6 +39,11 @@ function nav() {
 
 function cvButton() {
     const cvButton = document.createElement('a');
+
+    cvButton.addEventListener('click', () => {
+        alert('Still not available, but you can check my LinkedIn profile!');
+    });
+
     cvButton.className =
         'hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-md bg-slate-950 text-sm font-medium hover:bg-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 transition-colors duration-500 ease-in-out text-white';
 
