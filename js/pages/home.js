@@ -1,4 +1,4 @@
-function s(t){let e=document.createElement("div");e.innerHTML=`
+function s(e){let t=document.createElement("div");t.innerHTML=`
       <div class="flex items-center justify-center bg-black text-white min-h-screen">
       <div class="flex-1 py-12 sm:py-16 lg:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -15,8 +15,8 @@ function s(t){let e=document.createElement("div");e.innerHTML=`
             </div>
             <div class="relative h-64 sm:h-72 lg:h-full">
               <img
-                src="/assets/final-class.jpg"
-                alt="Hero image"
+                src="./assets/final-class.jpg"
+                alt="NOZK IMAGE!"
                 class="absolute inset-0 h-full w-full object-contain"
                 width="1200"
                 height="900"
@@ -26,4 +26,4 @@ function s(t){let e=document.createElement("div");e.innerHTML=`
           </div>
         </div>
       </div>
-      </div>`,t.appendChild(e)}export{s as render};
+      </div>`,e.appendChild(t)}export{s as render};
