@@ -12,3 +12,9 @@
 -   ESBUILD
 -   TAILWIND CSS
 -   ESLINT && PRETTIER
+
+
+## This is the backend repo.
+
+[BACKEND](https://github.com/andremarques94/personal-webapp-backend)
+
