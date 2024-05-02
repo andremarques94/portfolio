@@ -1,9 +1,12 @@
 async function handleSubmit(event) {
+    event.preventDefault();
     const email = document.querySelector('#email').value;
     const subject = event.target.form.querySelector('#subject').value;
     const message = event.target.form.querySelector('#message').value;
 
     await sendEmail(email, subject, message);
+
+    event.target.form.reset();
 }
 
 async function sendEmail(email, subject, text) {
@@ -74,7 +77,8 @@ function emailForm() {
     );
     p.innerHTML = `Want to work together? Have a question? Just want to say hi? Send me an email`;
     const form = document.createElement('form');
-    form.action = '';
+    form.action = '#';
+    form.method = 'POST';
     form.classList.add('space-y-8');
     const div1 = document.createElement('div');
     const label1 = document.createElement('label');
