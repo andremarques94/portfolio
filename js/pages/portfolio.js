@@ -21,7 +21,7 @@ async function getReposInfo() {
 }
 
 async function render(elem) {
-    elem.className = 'h-screen flex flex-col items-center justify-center ';
+    elem.className = 'flex flex-col justify-center items-center h-screen';
 
     const repos = await getReposInfo();
 
@@ -30,10 +30,12 @@ async function render(elem) {
     title.textContent = 'Click on the cards to see the repository!';
     elem.appendChild(title);
 
+    elem.appendChild(title);
+
     const section = document.createElement('section');
     section.id = 'CARDS';
     section.className =
-        'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 md:p-6 bg-gray-950 ';
+        'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 md:p-6 m-4';
     elem.appendChild(section);
 
     repos.forEach(repo => {

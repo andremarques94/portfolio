@@ -32,7 +32,7 @@ export function card({ name, url, description }) {
     );
 
     const header = document.createElement('div');
-    header.classList.add('flex', 'items-center', 'justify-between');
+    header.classList.add('flex', 'flex-col', 'justify-between');
 
     const avatar = document.createElement('img');
     avatar.alt = 'Avatar';
@@ -43,7 +43,7 @@ export function card({ name, url, description }) {
     avatar.width = 32;
 
     const title = document.createElement('h3');
-    title.classList.add('font-semibold', 'text-lg', 'text-gray-50');
+    title.classList.add('font-semibold', 'text-lg', 'text-gray-50', 'mt-4');
     title.textContent = name;
 
     header.appendChild(avatar);

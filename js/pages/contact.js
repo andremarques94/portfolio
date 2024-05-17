@@ -36,7 +36,6 @@ async function sendEmail(email, subject, text) {
 function render(elem) {
     elem.classList.add(
         'flex',
-
         'justify-center',
         'items-center',
         'bg-black',
@@ -59,20 +58,11 @@ function emailForm() {
         'tracking-tight',
         'font-extrabold',
         'text-center',
-        'text-gray-900',
-        'dark:text-white'
+        'text-gray-900'
     );
     h2.innerHTML = `Let's get in touch`;
     const p = document.createElement('p');
-    p.classList.add(
-        'mb-8',
-        'lg:mb-16',
-        'font-light',
-        'text-center',
-        'text-gray-500',
-        'dark:text-gray-400',
-        'sm:text-xl'
-    );
+    p.classList.add('mb-8', 'lg:mb-16', 'font-light', 'text-center', 'text-gray-500', 'sm:text-xl');
     p.innerHTML = `Want to work together? Have a question? Just want to say hi? Send me an email`;
     const form = document.createElement('form');
     form.action = '#';
