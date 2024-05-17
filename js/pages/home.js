@@ -1,5 +1,5 @@
-function s(e){let t=document.createElement("div");t.innerHTML=`
-      <div class="flex items-center justify-center bg-black text-white min-h-screen">
+function e(t){t.classList.add("flex","items-center","justify-center","bg-black","text-white","h-screen"),t.innerHTML=`
+
       <div class="flex-1 py-12 sm:py-16 lg:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
@@ -25,5 +25,4 @@ function s(e){let t=document.createElement("div");t.innerHTML=`
             </div>
           </div>
         </div>
-      </div>
-      </div>`,e.appendChild(t)}export{s as render};
+      </div>`}export{e as render};
