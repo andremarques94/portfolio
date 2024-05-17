@@ -26,7 +26,6 @@ async function sendEmail(email, subject, text) {
         body: JSON.stringify(data)
     });
 
-    console.log(answer);
     if (answer.ok) {
         alert('Email sent');
     } else {
@@ -35,23 +34,22 @@ async function sendEmail(email, subject, text) {
 }
 
 function render(elem) {
-    const content = document.createElement('div');
-    content.classList.add(
+    elem.classList.add(
         'flex',
+
         'justify-center',
         'items-center',
         'bg-black',
         'text-white',
-        'min-h-screen'
+        'h-screen'
     );
 
-    content.appendChild(emailForm());
-    elem.appendChild(content);
+    elem.appendChild(emailForm());
 }
 
 function emailForm() {
     const section = document.createElement('section');
-    section.classList.add('bg-black', 'dark:bg-gray-900');
+    section.classList.add('bg-black', 'dark:bg-gray-900', 'rounded-lg');
     const div = document.createElement('div');
     div.classList.add('py-8', 'lg:py-16', 'px-4', 'mx-auto', 'max-w-screen-md');
     const h2 = document.createElement('h2');

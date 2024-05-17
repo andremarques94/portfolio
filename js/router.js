@@ -32,6 +32,7 @@ function render({ page }) {
     const domElement = document.createElement('div');
 
     root.innerHTML = '';
+
     root.appendChild(navbar());
     root.appendChild(domElement);
     root.appendChild(footer());

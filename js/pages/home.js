@@ -1,8 +1,15 @@
 function render(elem) {
-    const content = document.createElement('div');
+    elem.classList.add(
+        'flex',
+        'items-center',
+        'justify-center',
+        'bg-black',
+        'text-white',
+        'h-screen'
+    );
 
-    content.innerHTML = `
-      <div class="flex items-center justify-center bg-black text-white min-h-screen">
+    elem.innerHTML = `
+
       <div class="flex-1 py-12 sm:py-16 lg:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
@@ -28,10 +35,7 @@ function render(elem) {
             </div>
           </div>
         </div>
-      </div>
       </div>`;
-
-    elem.appendChild(content);
 }
 
 export { render };
