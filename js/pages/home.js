@@ -101,14 +101,16 @@ function addAnimation(elem) {
     const words = [
         'FullStack Developer',
         'Teacher',
-        'JavaScript Developer',
-        'Java Developer',
-        'React.js Developer',
-        'Node.js Developer',
+        'JavaScript Dev.',
+        'Java Dev.',
+        'React.js Dev.',
+        'Node.js Dev.',
         'Mentor',
-        'AKA NOZK',
         'Dancer',
-        'Speaker'
+        'AKA NOZK',
+        'Speaker',
+        'Tech Enthusiast',
+        'Learner'
     ];
 
     let index = 0;
