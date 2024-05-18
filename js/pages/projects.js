@@ -21,14 +21,24 @@ async function getReposInfo() {
 }
 
 async function render(elem) {
-    elem.className = 'flex flex-col justify-center items-center h-screen';
+    elem.classList.add(
+        'flex',
+        'flex-col',
+        'md:flex-row',
+        'justify-center',
+        'items-center',
+        'bg-black',
+        'text-white',
+        'h-screen',
+        'overflow-y-auto',
+        'overflow-x-hidden'
+    );
 
     const repos = await getReposInfo();
 
     const title = document.createElement('h1');
-    title.className = 'text-5xl font-extrabold text-white m-4';
-    title.textContent = 'Click on the cards to see the repository!';
-    elem.appendChild(title);
+    title.className = 'text-8xl font-extrabold text-white m-4';
+    title.textContent = '';
 
     elem.appendChild(title);
 

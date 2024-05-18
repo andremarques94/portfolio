@@ -6,15 +6,16 @@ export function card({ name, url, description }) {
         'overflow-hidden',
         'rounded-lg',
         'shadow-md',
-        'hover:shadow-red-400',
+        'hover:shadow-gray-600',
         'transition-all',
         'duration-300',
         'bg-gray-900'
     );
 
     const link = document.createElement('a');
-    link.classList.add('absolute', 'inset-0', 'z-10');
+    link.classList.add('absolute', 'inset-0');
     link.href = url;
+    link.target = '_blank';
 
     const span = document.createElement('span');
     span.classList.add('sr-only');
@@ -28,7 +29,7 @@ export function card({ name, url, description }) {
         'p-4',
         'transition-transform',
         'duration-300',
-        'group-hover:-translate-y-1'
+        'group-hover:-translate-y-0.5'
     );
 
     const header = document.createElement('div');

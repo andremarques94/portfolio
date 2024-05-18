@@ -59,6 +59,10 @@ export function navigate(path) {
     render(route);
 }
 
+export function goTo(path) {
+    window.location.hash = path;
+}
+
 function getPath(urlStr) {
     return new URL(urlStr).hash.slice(1);
 }

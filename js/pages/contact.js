@@ -58,7 +58,7 @@ function emailForm() {
         'tracking-tight',
         'font-extrabold',
         'text-center',
-        'text-gray-900'
+        'text-gray-200'
     );
     h2.innerHTML = `Let's get in touch`;
     const p = document.createElement('p');

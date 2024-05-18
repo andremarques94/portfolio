@@ -1,7 +1,7 @@
 export function navbar() {
     const header = document.createElement('header');
     header.className =
-        'flex sticky top-0 items-center justify-between px-4 py-3 bg-gray-900 text-white';
+        'flex sticky top-0 items-center justify-between px-4 py-3 bg-gray-900 text-white z-50';
 
     header.appendChild(imgLogo());
     header.appendChild(nav());
@@ -32,7 +32,7 @@ function nav() {
     nav.innerHTML = `
       <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/">Home</a>
       <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/about">About</a>
-      <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/portfolio">Portfolio</a>
+      <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/projects">Projects</a>
       <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/contact">Contact</a>`;
     return nav;
 }
