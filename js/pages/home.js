@@ -50,7 +50,7 @@ function render(elem) {
 
     const image = document.createElement('img');
     image.src = './assets/final-class.jpg';
-    image.alt = 'André Marques teaching a class at Code For all';
+    image.alt = 'Me teaching a class at Code For all';
     image.classList.add('absolute', 'inset-0', 'h-full', 'w-full', 'object-contain', 'rounded-lg');
     image.width = 1200;
     image.height = 900;
@@ -106,6 +106,7 @@ function addAnimation(elem) {
         'React.js Developer',
         'Node.js Developer',
         'Mentor',
+        'AKA NOZK',
         'Dancer',
         'Speaker'
     ];
