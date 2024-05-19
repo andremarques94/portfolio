@@ -16,8 +16,6 @@ async function sendEmail(email, subject, text) {
         text
     };
 
-    console.log(JSON.stringify(data));
-
     const answer = await fetch('https://personal-webapp-backend-production.up.railway.app/', {
         method: 'POST',
         headers: {

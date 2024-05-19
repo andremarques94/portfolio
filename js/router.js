@@ -13,9 +13,7 @@ async function launchPage(domElement, pageName) {
     const baseURL = new URL('.', import.meta.url).href;
 
     const page = await import(`${baseURL}pages/${pageName}.js`);
-    console.log(domElement.innerHTML);
     domElement.innerHTML = '';
-    console.log(domElement.innerHTML);
     page.render(domElement);
 }
 
