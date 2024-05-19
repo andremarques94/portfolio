@@ -29,23 +29,21 @@ async function render(elem) {
         'items-center',
         'bg-black',
         'text-white',
-        'h-screen',
         'overflow-y-auto',
-        'overflow-x-hidden'
+        'h-screen'
     );
 
     const repos = await getReposInfo();
-
     const title = document.createElement('h1');
+
     title.className = 'text-8xl font-extrabold text-white m-4';
-    title.textContent = '';
+    title.textContent = 'PROJECTS';
 
     elem.appendChild(title);
 
     const section = document.createElement('section');
     section.id = 'CARDS';
-    section.className =
-        'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 md:p-6 m-4';
+    section.className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 p-4';
     elem.appendChild(section);
 
     repos.forEach(repo => {

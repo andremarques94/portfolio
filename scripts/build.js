@@ -1,7 +1,32 @@
 import { build } from 'esbuild';
 import path from 'path';
 import buildRoutesPlugin from './esbuild-plugins/build-routes.js';
+import buildTailwind from './esbuild-plugins/build-tailwind.js';
 import { BUILD_DIR } from './commons/commons.js';
+
+await build({
+    entryPoints: ['js/**'],
+    format: 'esm',
+    bundle: true,
+    minify: true,
+    treeShaking: true,
+    loader: { '.html': 'text' },
+    drop: ['debugger', 'console'],
+    dropLabels: ['DEV'],
+    logLevel: 'info',
+    plugins: [
+        buildRoutesPlugin({
+            src: `${path.join(BUILD_DIR, 'js', 'pages')}`,
+            dest: `${path.join(BUILD_DIR, 'js')}`,
+            file: 'routes.json'
+        }),
+        buildTailwind({
+            input: path.resolve('./css/input.css'),
+            output: path.resolve('./css/stylesheet.css')
+        })
+    ],
+    outdir: `${path.join(BUILD_DIR, '/js')}`
+});
 
 await build({
     entryPoints: ['css/stylesheet.css'],
@@ -29,24 +54,4 @@ await build({
         '.xml': 'copy'
     },
     outdir: `${path.resolve(BUILD_DIR)}`
-});
-
-await build({
-    entryPoints: ['js/**'],
-    format: 'esm',
-    bundle: true,
-    minify: true,
-    treeShaking: true,
-    loader: { '.html': 'text' },
-    drop: ['debugger', 'console'],
-    dropLabels: ['DEV'],
-    logLevel: 'info',
-    plugins: [
-        buildRoutesPlugin({
-            src: `${path.join(BUILD_DIR, 'js', 'pages')}`,
-            dest: `${path.join(BUILD_DIR, 'js')}`,
-            file: 'routes.json'
-        })
-    ],
-    outdir: `${path.join(BUILD_DIR, '/js')}`
 });
