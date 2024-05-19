@@ -13,7 +13,7 @@ export function card({ name, url, description }) {
     );
 
     const link = document.createElement('a');
-    link.classList.add('absolute', 'inset-0');
+    link.classList.add('absolute', 'inset-0', 'z-10');
     link.href = url;
     link.target = '_blank';
 
