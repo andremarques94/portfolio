@@ -1,4 +1,5 @@
 import { card } from '../components/card';
+import { loader } from '../components/loader.js';
 
 async function getReposInfo() {
     const response = await fetch('https://api.github.com/users/andremarques94/repos', {
@@ -21,6 +22,7 @@ async function getReposInfo() {
 }
 
 async function render(elem) {
+    loader(elem);
     elem.classList.add(
         'flex',
         'flex-col',
@@ -34,6 +36,7 @@ async function render(elem) {
     );
 
     const repos = await getReposInfo();
+    elem.innerHTML = '';
 
     const title = document.createElement('h1');
 
