@@ -34,6 +34,7 @@ async function render(elem) {
     );
 
     const repos = await getReposInfo();
+
     const title = document.createElement('h1');
 
     title.className = 'text-8xl font-extrabold text-white m-4';

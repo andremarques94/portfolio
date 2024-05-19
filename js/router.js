@@ -1,5 +1,6 @@
 import { navbar } from './components/header-navbar.js';
 import { footer } from './components/footer.js';
+import { loader } from './components/loader.js';
 
 let routes;
 
@@ -12,6 +13,9 @@ async function launchPage(domElement, pageName) {
     const baseURL = new URL('.', import.meta.url).href;
 
     const page = await import(`${baseURL}pages/${pageName}.js`);
+    console.log(domElement.innerHTML);
+    domElement.innerHTML = '';
+    console.log(domElement.innerHTML);
     page.render(domElement);
 }
 
@@ -30,6 +34,8 @@ function setCurrentRoute({ path, page }) {
 function render({ page }) {
     const root = document.querySelector('#app');
     const domElement = document.createElement('div');
+
+    loader(domElement); //loading animation
 
     root.innerHTML = '';
 
