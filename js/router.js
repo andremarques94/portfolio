@@ -1,8 +1,8 @@
-function a(){let e=document.createElement("header");return e.className="flex sticky top-0 items-center justify-between px-4 py-3 bg-gray-900 text-white z-50",e.appendChild(l()),e.appendChild(d()),e.appendChild(h()),e}function l(){let e=document.createElement("a");e.href="https://www.linkedin.com/in/andrelourencomarques",e.target="_blank";let t=document.createElement("img");return t.className="invisible md:visible h-12 w-12 rounded-full transition-transform duration-500 ease-in-out transform hover:scale-110",t.src="./assets/me.jpg",t.alt="Andr\xE9 Marques",e.appendChild(t),e}function d(){let e=document.createElement("nav");return e.className="flex items-center gap-6",e.innerHTML=`
+function a(){let e=document.createElement("header");return e.className="flex sticky top-0 items-center justify-between px-4 py-3 bg-gray-900 text-white z-50",e.appendChild(d()),e.appendChild(h()),e.appendChild(u()),e}function d(){let e=document.createElement("a");e.href="https://www.linkedin.com/in/andrelourencomarques",e.target="_blank";let t=document.createElement("img");return t.className="invisible md:visible h-12 w-12 rounded-full transition-transform duration-500 ease-in-out transform hover:scale-110",t.src="./assets/me.jpg",t.alt="Andr\xE9 Marques",e.appendChild(t),e}function h(){let e=document.createElement("nav");return e.className="flex items-center gap-6",e.innerHTML=`
       <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/">Home</a>
       <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/about">About</a>
       <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/projects">Projects</a>
-      <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/contact">Contact</a>`,e}function h(){let e=document.createElement("a");return e.addEventListener("click",()=>{alert("Still not available, but you can check my LinkedIn profile!")}),e.className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-md bg-slate-950 text-sm font-medium hover:bg-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 transition-colors duration-500 ease-in-out text-white",e.innerHTML=`
+      <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/contact">Contact</a>`,e}function u(){let e=document.createElement("a");return e.addEventListener("click",()=>{alert("Still not available, but you can check my LinkedIn profile!")}),e.className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-md bg-slate-950 text-sm font-medium hover:bg-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 transition-colors duration-500 ease-in-out text-white",e.innerHTML=`
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -64,4 +64,24 @@ function a(){let e=document.createElement("header");return e.className="flex sti
                   </a>
 
         </div>
-      </div>`,e}var n;async function u(e,t){(await import(`${new URL(".",import.meta.url).href}pages/${t}.js`)).render(e)}function p({path:e,page:t}){n.currentPath.path=e,n.currentPath.page=t}function m({page:e}){let t=document.querySelector("#app"),o=document.createElement("div");t.innerHTML="",t.appendChild(a()),t.appendChild(o),t.appendChild(i()),u(o,e)}function s(e){if(e===n.currentPath.path)return;let t=Object.keys(n).find(r=>n[r].path===e),o=n[t]||n.home;p(o),m(o)}function k(e){window.location.hash=e}function c(e){return new URL(e).hash.slice(1)}function w(){addEventListener("hashchange",function(e){let t=c(e.newURL);s(t)})}function f(e){n=e,window.location.hash=window.location.hash||n.home.path,s(c(window.location.href)),w()}var y={init:f};export{y as default,k as goTo,s as navigate};
+      </div>`,e}function s(e){e.classList.add("flex","justify-center","items-center","h-screen");let t=document.createElement("div");t.classList.add("loader");let n=document.createElement("style");n.innerHTML=`
+
+      .loader {
+        width: 85px;
+        height: 35px;
+        --g1:conic-gradient(from  90deg at 3px  3px ,#0000 90deg,#fff 0);
+        --g2:conic-gradient(from -90deg at 22px 22px,#0000 90deg,#fff 0);
+        background:var(--g1),var(--g1),var(--g1), var(--g2),var(--g2),var(--g2);
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+        animation: l6 1s infinite alternate;
+      }
+      @keyframes l6 {
+        0%   {background-position:0 50% ,50% 50% ,100% 50% }
+        20%  {background-position:0 0   ,50% 50% ,100% 50% }
+        40%  {background-position:0 100%,50%  0  ,100% 50% }
+        60%  {background-position:0 50% ,50% 100%,100% 0   }
+        80%  {background-position:0 50% ,50% 50% ,100% 100%}
+        100% {background-position:0 50% ,50% 50% ,100% 50% }
+      }
+      `,e.appendChild(n),e.appendChild(t)}var o;async function p(e,t){let r=await import(`${new URL(".",import.meta.url).href}pages/${t}.js`);e.innerHTML="",r.render(e)}function g({path:e,page:t}){o.currentPath.path=e,o.currentPath.page=t}function m({page:e}){let t=document.querySelector("#app"),n=document.createElement("div");s(n),t.innerHTML="",t.appendChild(a()),t.appendChild(n),t.appendChild(i()),p(n,e)}function c(e){if(e===o.currentPath.path)return;let t=Object.keys(o).find(r=>o[r].path===e),n=o[t]||o.home;g(n),m(n)}function C(e){window.location.hash=e}function l(e){return new URL(e).hash.slice(1)}function f(){addEventListener("hashchange",function(e){let t=l(e.newURL);c(t)})}function x(e){o=e,window.location.hash=window.location.hash||o.home.path,c(l(window.location.href)),f()}var M={init:x};export{M as default,C as goTo,c as navigate};
