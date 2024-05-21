@@ -63,6 +63,7 @@ function render(elem) {
     const contactButton = document.createElement('button');
     contactButton.classList.add(
         'mt-8',
+        'mr-4',
         'px-4',
         'py-2',
         'text-lg',
