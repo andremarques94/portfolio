@@ -10,11 +10,15 @@ let routes;
  * imports and init a controller
  */
 async function launchPage(domElement, pageName) {
+    loader(domElement); //loading animation
     const baseURL = new URL('.', import.meta.url).href;
 
     const page = await import(`${baseURL}pages/${pageName}.js`);
-    domElement.innerHTML = '';
-    page.render(domElement);
+
+    const newDomElement = document.createElement('div');
+    document.querySelector('#app').replaceChild(newDomElement, domElement); // replace loading animation with new page
+
+    page.render(newDomElement);
 }
 
 /**
@@ -32,8 +36,6 @@ function setCurrentRoute({ path, page }) {
 function render({ page }) {
     const root = document.querySelector('#app');
     const domElement = document.createElement('div');
-
-    loader(domElement); //loading animation
 
     root.innerHTML = '';
 

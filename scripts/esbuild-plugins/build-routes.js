@@ -3,7 +3,6 @@ import nodepath from 'path';
 
 const getDirectories = async source => {
     const result = await fs.readdir(source, { withFileTypes: true, recursive: true });
-
     return result
         .filter(dirent => dirent.name.includes('.js') && !dirent.isDirectory())
         .map(dirent => (dirent.path + '/' + dirent.name).replace(source, ''))
@@ -14,7 +13,6 @@ const getDirectories = async source => {
                     path: path === '/home' ? '/' : path,
                     page: path
                 };
-
                 acc[nodepath.basename(route.page)] = route;
                 return acc;
             },
