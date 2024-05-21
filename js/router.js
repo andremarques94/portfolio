@@ -1,8 +1,8 @@
-function a(){let e=document.createElement("header");return e.className="flex sticky top-0 items-center justify-between px-4 py-3 bg-gray-900 text-white z-50",e.appendChild(d()),e.appendChild(h()),e.appendChild(u()),e}function d(){let e=document.createElement("a");e.href="https://www.linkedin.com/in/andrelourencomarques",e.target="_blank";let t=document.createElement("img");return t.className="invisible md:visible h-12 w-12 rounded-full transition-transform duration-500 ease-in-out transform hover:scale-110",t.src="./assets/me.jpg",t.alt="Andr\xE9 Marques",e.appendChild(t),e}function h(){let e=document.createElement("nav");return e.className="flex items-center gap-6",e.innerHTML=`
+function i(){let e=document.createElement("header");return e.className="flex sticky top-0 items-center justify-between px-4 py-3 bg-gray-900 text-white z-50",e.appendChild(h()),e.appendChild(u()),e.appendChild(p()),e}function h(){let e=document.createElement("a");e.href="https://www.linkedin.com/in/andrelourencomarques",e.target="_blank";let t=document.createElement("img");return t.className="invisible md:visible h-12 w-12 rounded-full transition-transform duration-500 ease-in-out transform hover:scale-110",t.src="./assets/me.jpg",t.alt="Andr\xE9 Marques",e.appendChild(t),e}function u(){let e=document.createElement("nav");return e.className="flex items-center gap-6",e.innerHTML=`
       <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/">Home</a>
       <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/about">About</a>
       <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/projects">Projects</a>
-      <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/contact">Contact</a>`,e}function u(){let e=document.createElement("a");return e.addEventListener("click",()=>{alert("Still not available, but you can check my LinkedIn profile!")}),e.className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-md bg-slate-950 text-sm font-medium hover:bg-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 transition-colors duration-500 ease-in-out text-white",e.innerHTML=`
+      <a class = 'text-xl font-bold transition-colors duration-500 ease-in-out text-white hover:text-red-500' href="#/contact">Contact</a>`,e}function p(){let e=document.createElement("a");return e.addEventListener("click",()=>{alert("Still not available, but you can check my LinkedIn profile!")}),e.className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-md bg-slate-950 text-sm font-medium hover:bg-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 transition-colors duration-500 ease-in-out text-white",e.innerHTML=`
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -19,7 +19,7 @@ function a(){let e=document.createElement("header");return e.className="flex sti
         <polyline points="7 10 12 15 17 10"></polyline>
         <line x1="12" x2="12" y1="15" y2="3"></line>
       </svg>
-      <span class="transition-colors duration-500 ease-in-out text-white">Download CV</span>`,e}function i(){let e=document.createElement("footer");return e.className="sticky bottom-0 bg-gray-900 px-4 py-3 overscroll-none sm:px-6 lg:px-8 z-50",e.innerHTML=`
+      <span class="transition-colors duration-500 ease-in-out text-white">Download CV</span>`,e}function s(){let e=document.createElement("footer");return e.className="sticky bottom-0 bg-gray-900 px-4 py-3 overscroll-none sm:px-6 lg:px-8 z-50",e.innerHTML=`
       <div class="flex items-center justify-between">
         <p class="text-sm text-gray-400">\xA9 2024 Andr\xE9 Marques. All rights reserved.</p>
         <div class="flex space-x-4">
@@ -64,7 +64,7 @@ function a(){let e=document.createElement("header");return e.className="flex sti
                   </a>
 
         </div>
-      </div>`,e}function s(e){e.classList.add("flex","justify-center","items-center","h-screen");let t=document.createElement("div");t.classList.add("loader");let n=document.createElement("style");n.innerHTML=`
+      </div>`,e}function c(e){e.classList.add("flex","justify-center","items-center","h-screen");let t=document.createElement("div");t.classList.add("loader");let n=document.createElement("style");n.innerHTML=`
 
       .loader {
         width: 85px;
@@ -84,4 +84,4 @@ function a(){let e=document.createElement("header");return e.className="flex sti
         80%  {background-position:0 50% ,50% 50% ,100% 100%}
         100% {background-position:0 50% ,50% 50% ,100% 50% }
       }
-      `,e.appendChild(n),e.appendChild(t)}var o;async function p(e,t){let r=await import(`${new URL(".",import.meta.url).href}pages/${t}.js`);e.innerHTML="",r.render(e)}function g({path:e,page:t}){o.currentPath.path=e,o.currentPath.page=t}function f({page:e}){let t=document.querySelector("#app"),n=document.createElement("div");s(n),t.innerHTML="",t.appendChild(a()),t.appendChild(n),t.appendChild(i()),p(n,e)}function c(e){if(e===o.currentPath.path)return;let t=Object.keys(o).find(r=>o[r].path===e),n=o[t]||o.home;g(n),f(n)}function L(e){window.location.hash=e}function l(e){return new URL(e).hash.slice(1)}function m(){addEventListener("hashchange",function(e){let t=l(e.newURL);c(t)})}function x(e){o=e,window.location.hash=window.location.hash||o.home.path,c(l(window.location.href)),m()}var M={init:x};export{M as default,L as goTo,c as navigate};
+      `,e.appendChild(n),e.appendChild(t)}var o;async function g(e,t){c(e);let r=await import(`${new URL(".",import.meta.url).href}pages/${t}.js`),a=document.createElement("div");document.querySelector("#app").replaceChild(a,e),r.render(a)}function m({path:e,page:t}){o.currentPath.path=e,o.currentPath.page=t}function f({page:e}){let t=document.querySelector("#app"),n=document.createElement("div");t.innerHTML="",t.appendChild(i()),t.appendChild(n),t.appendChild(s()),g(n,e)}function l(e){if(e===o.currentPath.path)return;let t=Object.keys(o).find(r=>o[r].path===e),n=o[t]||o.home;m(n),f(n)}function E(e){window.location.hash=e}function d(e){return new URL(e).hash.slice(1)}function x(){addEventListener("hashchange",function(e){let t=d(e.newURL);l(t)})}function v(e){o=e,window.location.hash=window.location.hash||o.home.path,l(d(window.location.href)),x()}var j={init:v};export{j as default,E as goTo,l as navigate};
