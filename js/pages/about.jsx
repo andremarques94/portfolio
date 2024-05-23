@@ -3,8 +3,7 @@ import { createRoot } from 'react-dom/client';
 import AboutMe from '../jsx-components/about-me.jsx';
 
 function render(elem) {
-    // Render your React component instead
-    elem.className = 'h-full';
+    elem.className = 'flex-grow';
     const root = createRoot(elem);
     root.render(<AboutMe />);
 }

@@ -35,6 +35,7 @@ function setCurrentRoute({ path, page }) {
 //path may be useful for some controllers
 function render({ page }) {
     const root = document.querySelector('#app');
+    root.className = 'min-h-screen flex flex-col';
     const domElement = document.createElement('div');
 
     root.innerHTML = '';

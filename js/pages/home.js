@@ -51,10 +51,10 @@ function render(elem) {
     const image = document.createElement('img');
     image.src = './assets/final-class.jpg';
     image.alt = 'Me teaching a class at Code For all';
-    image.classList.add('absolute', 'inset-0', 'h-full', 'w-full', 'object-contain', 'rounded-lg');
-    image.width = 1200;
-    image.height = 900;
-    image.style.aspectRatio = '1200 / 900';
+    image.classList.add('mx-auto', 'rounded-full');
+    image.width = 400;
+    image.height = 400;
+    image.style.aspectRatio = '400/400';
     image.style.objectFit = 'cover';
     rightColumn.appendChild(image);
 
