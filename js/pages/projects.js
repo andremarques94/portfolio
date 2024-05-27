@@ -26,13 +26,12 @@ async function render(elem) {
     elem.classList.add(
         'flex',
         'flex-col',
+        'flex-grow',
         'md:flex-row',
         'justify-center',
         'items-center',
         'bg-black',
-        'text-white',
-        'overflow-y-auto',
-        'h-screen'
+        'text-white'
     );
 
     const repos = await getReposInfo();

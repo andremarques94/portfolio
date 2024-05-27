@@ -48,7 +48,8 @@ const staticAssetsBuild = await context({
         '.html': 'copy',
         '.svg': 'copy',
         '.webmanifest': 'copy',
-        '.xml': 'copy'
+        '.xml': 'copy',
+        '.pdf': 'copy'
     },
     outdir: `${publicDir}`
 });

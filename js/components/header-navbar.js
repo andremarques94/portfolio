@@ -41,7 +41,7 @@ function cvButton() {
     const cvButton = document.createElement('a');
 
     cvButton.addEventListener('click', () => {
-        alert('Still not available, but you can check my LinkedIn profile!');
+        window.open('./assets/cv-andre.pdf');
     });
 
     cvButton.className =

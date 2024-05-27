@@ -100,7 +100,7 @@ function addAnimation(elem) {
     elem.appendChild(style);
 
     const words = [
-        'FullStack Developer',
+        'Software Developer',
         'Teacher',
         'JavaScript Dev.',
         'Java Dev.',
