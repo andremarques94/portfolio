@@ -51,7 +51,8 @@ await build({
         '.html': 'copy',
         '.svg': 'copy',
         '.webmanifest': 'copy',
-        '.xml': 'copy'
+        '.xml': 'copy',
+        '.pdf': 'copy'
     },
     outdir: `${path.resolve(BUILD_DIR)}`
 });
