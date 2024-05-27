@@ -82,7 +82,7 @@ export default function Component() {
                     </div>
                 </div>
             </section>
-            <section className="w-full py-8 md:py-16 lg:py-24">
+            <section className="w-full flex justify-center items-center py-8 md:py-16 lg:py-24">
                 <div className="container grid items-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-16">
                     <div className="space-y-4">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -96,19 +96,19 @@ export default function Component() {
                         </p>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
-                        <div className="rounded-md bg-white p-4 shadow-sm dark:bg-gray-950">
-                            <BackpackIcon className="h-8 w-8 text-gray-500 dark:text-gray-400" />
-                            <h3 className="mt-2 text-lg font-semibold">Song digging</h3>
+                        <div className="flex flex-col items-center justify-center rounded-md bg-white p-4 shadow-sm dark:bg-gray-950">
+                            <MusicNote className="h-8 w-8 text-gray-500 dark:text-gray-400" />
+                            <h3 className="mt-2 text-lg font-semibold">Music</h3>
                         </div>
-                        <div className="rounded-md bg-white p-4 shadow-sm dark:bg-gray-950">
+                        <div className="flex flex-col items-center justify-center rounded-md bg-white p-4 shadow-sm dark:bg-gray-950">
                             <BookIcon className="h-8 w-8 text-gray-500 dark:text-gray-400" />
                             <h3 className="mt-2 text-lg font-semibold">Reading</h3>
                         </div>
-                        <div className="rounded-md bg-white p-4 shadow-sm dark:bg-gray-950">
+                        <div className="flex flex-col items-center justify-center rounded-md bg-white p-4 shadow-sm dark:bg-gray-950">
                             <PlaneIcon className="h-8 w-8 text-gray-500 dark:text-gray-400" />
                             <h3 className="mt-2 text-lg font-semibold">Traveling</h3>
                         </div>
-                        <div className="rounded-md bg-white p-4 shadow-sm dark:bg-gray-950">
+                        <div className="flex flex-col items-center justify-center rounded-md bg-white p-4 shadow-sm dark:bg-gray-950">
                             <ActivityIcon className="h-8 w-8 text-gray-500 dark:text-gray-400" />
                             <h3 className="mt-2 text-lg font-semibold">Dancing</h3>
                         </div>
@@ -138,7 +138,7 @@ function ActivityIcon(props) {
     );
 }
 
-function BackpackIcon(props) {
+function MusicNote(props) {
     return (
         <svg
             {...props}

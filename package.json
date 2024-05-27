@@ -1,7 +1,7 @@
 {
-    "name": "javascript-app-boilerplate",
+    "name": "Portfolio app",
     "version": "1.0.0",
-    "description": "Small boilerplate for JavaScript applications",
+    "description": "Client side for my portfolio app using js, react and tailwindcss",
     "type": "module",
     "main": "app.js",
     "engines": {
@@ -15,15 +15,7 @@
         "lint": "eslint . --ext .js",
         "lint:fix": "eslint --fix ."
     },
-    "keywords": [
-        "javascript",
-        "boilerplate",
-        "template",
-        "quick",
-        "setup",
-        "router",
-        "starter"
-    ],
+    "keywords": ["javascript", "boilerplate", "template", "quick", "setup", "router", "starter"],
     "author": "NOZK",
     "license": "ISC",
     "devDependencies": {
