@@ -821,6 +821,14 @@ video {
   overflow: hidden;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .overscroll-none {
   overscroll-behavior: none;
 }
@@ -1232,6 +1240,10 @@ body,
 
   .md\:inline-flex {
     display: inline-flex;
+  }
+
+  .md\:flex-grow {
+    flex-grow: 1;
   }
 
   .md\:grid-cols-3 {

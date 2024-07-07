@@ -70,6 +70,8 @@ function render(elem) {
         'font-semibold',
         'text-white',
         'bg-red-500',
+        'invisible',
+        'md:visible',
         'rounded-lg',
         'hover:bg-red-700',
         'focus:outline-none',

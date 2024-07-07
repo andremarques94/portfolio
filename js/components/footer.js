@@ -1,7 +1,7 @@
 export function footer() {
     const footerElem = document.createElement('footer');
     footerElem.className =
-        'sticky bottom-0 bg-gray-900 px-4 py-3 overscroll-none sm:px-6 lg:px-8 z-50';
+        'sticky bottom-0 bg-gray-900 px-4 py-3 overscroll-none z-50 sm:px-6 lg:px-8';
 
     footerElem.innerHTML = `
       <div class="flex items-center justify-between">

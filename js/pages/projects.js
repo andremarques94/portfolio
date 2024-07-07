@@ -26,7 +26,9 @@ async function render(elem) {
     elem.classList.add(
         'flex',
         'flex-col',
-        'flex-grow',
+        'md:flex-grow',
+        'overflow-x-hidden',
+        'overflow-y-scroll',
         'md:flex-row',
         'justify-center',
         'items-center',
