@@ -1,4 +1,4 @@
-function e(){let t=document.createElement("footer");return t.className="sticky bottom-0 bg-gray-900 px-4 py-3 overscroll-none sm:px-6 lg:px-8 z-50",t.innerHTML=`
+function e(){let t=document.createElement("footer");return t.className="sticky bottom-0 bg-gray-900 px-4 py-3 overscroll-none z-50 sm:px-6 lg:px-8",t.innerHTML=`
       <div class="flex items-center justify-between">
         <p class="text-sm text-gray-400">\xA9 2024 Andr\xE9 Marques. All rights reserved.</p>
         <div class="flex space-x-4">

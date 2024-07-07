@@ -19,7 +19,7 @@ function i(){let e=document.createElement("header");return e.className="flex sti
         <polyline points="7 10 12 15 17 10"></polyline>
         <line x1="12" x2="12" y1="15" y2="3"></line>
       </svg>
-      <span class="transition-colors duration-500 ease-in-out text-white">Download CV</span>`,e}function s(){let e=document.createElement("footer");return e.className="sticky bottom-0 bg-gray-900 px-4 py-3 overscroll-none sm:px-6 lg:px-8 z-50",e.innerHTML=`
+      <span class="transition-colors duration-500 ease-in-out text-white">Download CV</span>`,e}function s(){let e=document.createElement("footer");return e.className="sticky bottom-0 bg-gray-900 px-4 py-3 overscroll-none z-50 sm:px-6 lg:px-8",e.innerHTML=`
       <div class="flex items-center justify-between">
         <p class="text-sm text-gray-400">\xA9 2024 Andr\xE9 Marques. All rights reserved.</p>
         <div class="flex space-x-4">
