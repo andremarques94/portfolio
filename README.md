@@ -1,6 +1,7 @@
 # Personal Website hosted on Github Pages
 
-## Check it [HERE](https://andremarques94.github.io/personal-webapp/)
+## Check it [HERE](https://andremarques94.github.io/portfolio/)
+
 
 ## What it uses
 
